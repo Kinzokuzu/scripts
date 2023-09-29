@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# TODO: add usage guide in case of bad input
+# TODO:
+# • add usage guide in case of bad input
+# • remove .zip from already unzipped files
 
 target=$1
 # TODO: next line may not work on all platforms, find other solutions e.g. string manipulation
