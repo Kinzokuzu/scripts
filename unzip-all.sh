@@ -16,8 +16,8 @@ echo "Unzipping files from $target into $targetDir/unzipped"
 # unzip [target file] -d [target location]
 for f in "$target"/*
 do
-    # bf=${f##*/} should work for all bash
-    bf=$(basename $f) # POSIX only
+    # bf=${f##*/} should work for all bash but does not get rid of .zip extension
+    bf=$(basename $f .zip) # POSIX only
     unzip -q $f -d $targetDir/unzipped/$bf
 done
 
