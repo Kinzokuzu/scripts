@@ -9,6 +9,7 @@ targetDir=$(dirname "$target") # POSIX only
 echo "Creating directory: $targetDir/unzipped"
 mkdir "$targetDir/unzipped"
 
+echo "Unzipping files from $target into $targetDir/unzipped"
 # unzip command:
 # unzip [target file] -d [target location]
 for f in "$target"/*
