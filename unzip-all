@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # TODO:
-# • Handle options (flags) and usage
+# • handle options (flags) and usage
+# • except for '-d' remove concrete flags from called command and have them be passed as variables
 
 target=$1
 # TODO: next line may not work on all platforms, find other solutions e.g. string manipulation
