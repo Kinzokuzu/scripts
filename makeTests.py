@@ -1,5 +1,6 @@
 import sys
 
+# TODO: handle constant parameters passed as x=0, where x is any variable and the constant value can be passed as 0,1,lo,hi,low,high
 # get variables
 var_str = input()
 var_list = []
@@ -16,6 +17,7 @@ for i in range(len(var_str)):
     else:
         var += var_str[i]     # handle multi character variables
 
+# TODO: implement constants
 # get binary numbers
 bits = len(var_list)
 binary_nums = []
