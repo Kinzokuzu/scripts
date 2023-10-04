@@ -1,0 +1,34 @@
+import sys
+
+# TODO: implement usage
+
+# get variables
+var_str = input()
+var_list = [] # holds variables
+var = ""
+for var in var_str.split(sep=','): # seperate variables
+    # further seperate variables with assigned states
+    var_list.append(var.split(sep='='))
+
+# get binary numbers
+bits = len(var_list)
+binary_nums = []
+test_list = []
+for i in range(2**bits):
+    # ignore '0b'
+    curr_bin_num = bin(i)[2::]
+    binary_nums.append('0'*(bits - len(curr_bin_num)) + curr_bin_num)
+
+# TODO: fix printing of repeated tests, issue stems from having set states  
+# print tests 
+for i in range(2**bits):
+    print("-- Test ", i, " --", sep="")
+    
+    for j in range(len(var_list)):
+        if len(var_list[j]) == 1: 
+            print(var_list[j][0], " <= \'", binary_nums[i][j], "\';", sep="")
+        # handle variables with assigned states
+        elif len(var_list[j]) == 2:
+            print(var_list[j][0], " <= \'", var_list[j][1], "\'", sep="")
+
+    print("wait for 10ns;", end="\n\n")
