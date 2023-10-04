@@ -6,6 +6,7 @@ import sys
 
 # get variables
 var_str = input()
+var_str = var_str.replace(" ", "") # remove all white spaces
 var_list = [] # holds variables
 var = ""
 for var in var_str.split(sep=','): # seperate variables
