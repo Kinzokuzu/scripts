@@ -36,7 +36,6 @@ for i in range(len(binary_nums)):
 # get rid of duplicate tests and sort
 test_set = list(set(test_list))
 test_set.sort()
-print(test_set)
 
 # print tests 
 for i in range(len(test_set)):
