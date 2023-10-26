@@ -10,7 +10,7 @@ if [ $# -ne 1 ] && [ $# -ne 3 ];
 then
     echo "usage: chad-unzipper [file] [target file type] [maximum number of attempts]"
     exit 1
-# handle unassigned target file type and attempt count
+# handle unassigned target_file_type and attempt_count
 elif [ $# -eq 1 ];
 then
     target_file_type="NONE"
@@ -21,7 +21,7 @@ fi
 file_command_output=$(file -b $file_name) 
 # delimits file_command_output by space
 IFS=" " read -ra FILE_COMMAND_STRING<<< "$file_command_output"
-# file type is in STRING[0]
+# file type is in FILE_COMMAND_STRING[0]
 file_type="${FILE_COMMAND_STRING[0]}"
 
 # TODO: figure out way to manipulate "same" file multiple times.
